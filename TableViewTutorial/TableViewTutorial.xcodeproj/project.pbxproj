@@ -15,6 +15,7 @@
 		F952E3DC261F38660002DF97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F952E3DA261F38660002DF97 /* LaunchScreen.storyboard */; };
 		F952E3E7261F38660002DF97 /* TableViewTutorialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F952E3E6261F38660002DF97 /* TableViewTutorialTests.swift */; };
 		F952E3F2261F38660002DF97 /* TableViewTutorialUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F952E3F1261F38660002DF97 /* TableViewTutorialUITests.swift */; };
+		F952E4032620A0FD0002DF97 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F952E4022620A0FD0002DF97 /* MyTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		F952E3ED261F38660002DF97 /* TableViewTutorialUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TableViewTutorialUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F952E3F1261F38660002DF97 /* TableViewTutorialUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewTutorialUITests.swift; sourceTree = "<group>"; };
 		F952E3F3261F38660002DF97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F952E4022620A0FD0002DF97 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				F952E3D8261F38660002DF97 /* Assets.xcassets */,
 				F952E3DA261F38660002DF97 /* LaunchScreen.storyboard */,
 				F952E3DD261F38660002DF97 /* Info.plist */,
+				F952E4022620A0FD0002DF97 /* MyTableViewCell.swift */,
 			);
 			path = TableViewTutorial;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F952E3D4261F38630002DF97 /* ViewController.swift in Sources */,
+				F952E4032620A0FD0002DF97 /* MyTableViewCell.swift in Sources */,
 				F952E3D0261F38630002DF97 /* AppDelegate.swift in Sources */,
 				F952E3D2261F38630002DF97 /* SceneDelegate.swift in Sources */,
 			);

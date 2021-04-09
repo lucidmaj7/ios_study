@@ -7,10 +7,22 @@
 
 import UIKit
 
-class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
 
+
+class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
+    
+    struct NameEmail {
+        var name: String
+        var email: String
+    }
+    
     let cellIdentifier = "MyCell"
-    let myData = ["사과","당근","카카오","샐러드"]
+    let myData = [
+        NameEmail(name: "James",email: "James@gmail.com"),
+        NameEmail(name: "LaLa",email: "LaLa@gmail.com"),
+        NameEmail(name: "Kim",email: "Kim@gmail.com"),
+        NameEmail(name: "Hong",email: "Hong@gmail.com")
+    ]
     
     @IBOutlet weak var myTableView: UITableView!
     override func viewDidLoad() {
@@ -25,8 +37,10 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = self.myTableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
-        cell.textLabel?.text = myData[indexPath.row]
+        let cell: MyTableViewCell = self.myTableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! MyTableViewCell
+       
+        cell.emailLabel.text = myData[indexPath.row].email
+        cell.nameLabel.text = myData[indexPath.row].name
         return cell
     }
 

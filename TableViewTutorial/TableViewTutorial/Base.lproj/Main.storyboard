@@ -20,13 +20,37 @@
                                 <rect key="frame" x="0.0" y="5" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyCell" id="zch-IL-2R9">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyCell" id="zch-IL-2R9" customClass="MyTableViewCell" customModule="TableViewTutorial" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zch-IL-2R9" id="0L5-iJ-rFP">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CRa-oa-R2b" userLabel="email">
+                                                    <rect key="frame" x="30" y="11.5" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SB3-9v-4I3" userLabel="Name">
+                                                    <rect key="frame" x="104" y="11.5" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="SB3-9v-4I3" firstAttribute="leading" secondItem="CRa-oa-R2b" secondAttribute="trailing" constant="32" id="Fxi-Rm-0dg"/>
+                                                <constraint firstItem="SB3-9v-4I3" firstAttribute="centerY" secondItem="0L5-iJ-rFP" secondAttribute="centerY" id="Njh-Ca-z8Z"/>
+                                                <constraint firstItem="CRa-oa-R2b" firstAttribute="leading" secondItem="0L5-iJ-rFP" secondAttribute="leading" constant="30" id="PXc-4i-hvV"/>
+                                                <constraint firstItem="CRa-oa-R2b" firstAttribute="centerY" secondItem="0L5-iJ-rFP" secondAttribute="centerY" id="sCj-5H-mVt"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="emailLabel" destination="CRa-oa-R2b" id="aHf-Se-poV"/>
+                                            <outlet property="nameLabel" destination="SB3-9v-4I3" id="Cy9-Pk-pBS"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
