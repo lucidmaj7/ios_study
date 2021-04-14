@@ -23,6 +23,12 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         NameEmail(name: "Kim",email: "Kim@gmail.com"),
         NameEmail(name: "Hong",email: "Hong@gmail.com")
     ]
+    let myData2 = [
+        NameEmail(name: "김철수",email: "kim@gmail.com"),
+        NameEmail(name: "안철수",email: "ahn@gmail.com"),
+        NameEmail(name: "고길동",email: "gogo@gmail.com"),
+        NameEmail(name: "백종원",email: "backback@gmail.com")
+    ]
     
     @IBOutlet weak var myTableView: UITableView!
     override func viewDidLoad() {
@@ -31,16 +37,37 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         myTableView.dataSource = self
         // Do any additional setup after loading the view.
     }
-    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if (section == 0 )
+        {
+            return "mydata"
+        }
+        return "mydata2"
+        
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return myData.count
+        if(section == 0)
+        {
+            return myData.count
+        }
+        return myData2.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: MyTableViewCell = self.myTableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! MyTableViewCell
-       
-        cell.emailLabel.text = myData[indexPath.row].email
-        cell.nameLabel.text = myData[indexPath.row].name
+        if( indexPath.section == 0 )
+        {
+            cell.emailLabel.text = myData[indexPath.row].email
+            cell.nameLabel.text = myData[indexPath.row].name
+        }else{
+            cell.emailLabel.text = myData2[indexPath.row].email
+            cell.nameLabel.text = myData2[indexPath.row].name
+
+        }
+      
         return cell
     }
 
