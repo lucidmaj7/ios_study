@@ -29,6 +29,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         NameEmail(name: "고길동",email: "gogo@gmail.com"),
         NameEmail(name: "백종원",email: "backback@gmail.com")
     ]
+    let sections = ["mydata", "mydata2"]
     
     @IBOutlet weak var myTableView: UITableView!
     override func viewDidLoad() {
@@ -38,14 +39,10 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         // Do any additional setup after loading the view.
     }
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return sections.count
     }
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if (section == 0 )
-        {
-            return "mydata"
-        }
-        return "mydata2"
+        return sections[section]
         
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
